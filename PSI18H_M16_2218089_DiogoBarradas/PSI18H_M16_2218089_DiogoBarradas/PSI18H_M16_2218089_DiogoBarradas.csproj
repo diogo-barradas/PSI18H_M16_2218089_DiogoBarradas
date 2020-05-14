@@ -52,25 +52,34 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -81,40 +90,79 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Bank.png" />
+    <None Include="Resources\Minimizar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\emojipng.com-65301.png" />
+    <None Include="Resources\Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\43625.png" />
+    <None Include="Resources\Maximizar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Minimize-Maximize-Close-Window-icon.png" />
+    <None Include="Resources\Fechar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\img_477290.png" />
+    <None Include="Resources\Login.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Minimize-Maximize-Close-Window-icon1.png" />
+    <None Include="Resources\Consultar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\minimize-window.png" />
+    <None Include="Resources\Login1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-minimize-window-100.png" />
+    <None Include="Resources\Deposito.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-minimize-window-96.png" />
+    <None Include="Resources\Levantar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-maximize-window-100 %281%29.png" />
+    <None Include="Resources\Transferir.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-close-window-100.png" />
+    <None Include="Resources\Pagamento.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-minimize-window-100 %281%29.png" />
+    <None Include="Resources\Sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fechar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teste.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teste2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ex1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teste4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\olho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\olho2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\olho3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-15.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

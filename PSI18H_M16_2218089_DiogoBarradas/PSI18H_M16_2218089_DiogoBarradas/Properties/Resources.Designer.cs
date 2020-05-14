@@ -63,9 +63,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _43625 {
+        internal static System.Drawing.Bitmap Consultar {
             get {
-                object obj = ResourceManager.GetObject("43625", resourceCulture);
+                object obj = ResourceManager.GetObject("Consultar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Bank {
+        internal static System.Drawing.Bitmap Deposito {
             get {
-                object obj = ResourceManager.GetObject("Bank", resourceCulture);
+                object obj = ResourceManager.GetObject("Deposito", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap emojipng_com_65301 {
+        internal static System.Drawing.Bitmap Ex {
             get {
-                object obj = ResourceManager.GetObject("emojipng.com-65301", resourceCulture);
+                object obj = ResourceManager.GetObject("Ex", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_close_window_100 {
+        internal static System.Drawing.Bitmap Ex1 {
             get {
-                object obj = ResourceManager.GetObject("icons8-close-window-100", resourceCulture);
+                object obj = ResourceManager.GetObject("Ex1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_maximize_window_100__1_ {
+        internal static System.Drawing.Bitmap Fechar {
             get {
-                object obj = ResourceManager.GetObject("icons8-maximize-window-100 (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("Fechar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_minimize_window_100 {
+        internal static System.Drawing.Bitmap Fechar1 {
             get {
-                object obj = ResourceManager.GetObject("icons8-minimize-window-100", resourceCulture);
+                object obj = ResourceManager.GetObject("Fechar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_minimize_window_100__1_ {
+        internal static System.Drawing.Bitmap icons8_eye_15 {
             get {
-                object obj = ResourceManager.GetObject("icons8-minimize-window-100 (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-eye-15", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_minimize_window_96 {
+        internal static System.Drawing.Bitmap Levantar {
             get {
-                object obj = ResourceManager.GetObject("icons8-minimize-window-96", resourceCulture);
+                object obj = ResourceManager.GetObject("Levantar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap img_477290 {
+        internal static System.Drawing.Bitmap Login {
             get {
-                object obj = ResourceManager.GetObject("img_477290", resourceCulture);
+                object obj = ResourceManager.GetObject("Login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Minimize_Maximize_Close_Window_icon {
+        internal static System.Drawing.Bitmap Login1 {
             get {
-                object obj = ResourceManager.GetObject("Minimize-Maximize-Close-Window-icon", resourceCulture);
+                object obj = ResourceManager.GetObject("Login1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Minimize_Maximize_Close_Window_icon1 {
+        internal static System.Drawing.Bitmap Logo {
             get {
-                object obj = ResourceManager.GetObject("Minimize-Maximize-Close-Window-icon1", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,139 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap minimize_window {
+        internal static System.Drawing.Bitmap Maximizar {
             get {
-                object obj = ResourceManager.GetObject("minimize-window", resourceCulture);
+                object obj = ResourceManager.GetObject("Maximizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maximizar1 {
+            get {
+                object obj = ResourceManager.GetObject("Maximizar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimizar {
+            get {
+                object obj = ResourceManager.GetObject("Minimizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimizar1 {
+            get {
+                object obj = ResourceManager.GetObject("Minimizar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap olho {
+            get {
+                object obj = ResourceManager.GetObject("olho", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap olho2 {
+            get {
+                object obj = ResourceManager.GetObject("olho2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap olho3 {
+            get {
+                object obj = ResourceManager.GetObject("olho3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pagamento {
+            get {
+                object obj = ResourceManager.GetObject("Pagamento", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sair {
+            get {
+                object obj = ResourceManager.GetObject("Sair", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Teste {
+            get {
+                object obj = ResourceManager.GetObject("Teste", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Teste2 {
+            get {
+                object obj = ResourceManager.GetObject("Teste2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap teste4 {
+            get {
+                object obj = ResourceManager.GetObject("teste4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Transferir {
+            get {
+                object obj = ResourceManager.GetObject("Transferir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap x {
+            get {
+                object obj = ResourceManager.GetObject("x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
