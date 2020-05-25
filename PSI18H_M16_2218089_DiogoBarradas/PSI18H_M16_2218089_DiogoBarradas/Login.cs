@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace PSI18H_M16_2218089_DiogoBarradas
 {
@@ -17,6 +18,8 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             InitializeComponent();
         }
+
+        MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=psi18h_m16_2218089_diogobarradas");
 
         //Faz desaparecer o texto da textbox ao clicar
         private void textBox1_Enter(object sender, EventArgs e)
@@ -67,9 +70,37 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         //abrir novo form 
         private void button8_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Menu menu = new Menu();
-            menu.ShowDialog();
+            string user = textBox1.Text; // CRIAR UMA TEXTBOX PARA O USERNAME EM VEZ DO ID
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM registo WHERE ID=@ID AND PIN=@PIN", connection);
+
+            command.Parameters.AddWithValue("@ID",  textBox1.Text);
+            command.Parameters.AddWithValue("@PIN", textBox2.Text);
+
+            try
+            {
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    MessageBox.Show($"Bem-vindo {user}!");
+                    this.Hide();
+                    Menu menu = new Menu();
+                    menu.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("O ID e o PIN fornecidos não correspondem às informações em nossos registros.Verifique-as e tente novamente.");
+                }
+
+                connection.Close();
+            }
+
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message, "O ID e o PIN fornecidos não correspondem às informações em nossos registros. Verifique-as e tente novamente.");
+            }
         }
 
         //abrir novo form 
