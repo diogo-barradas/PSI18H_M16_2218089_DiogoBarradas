@@ -16,7 +16,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Logotipo());
         }
     }
 }

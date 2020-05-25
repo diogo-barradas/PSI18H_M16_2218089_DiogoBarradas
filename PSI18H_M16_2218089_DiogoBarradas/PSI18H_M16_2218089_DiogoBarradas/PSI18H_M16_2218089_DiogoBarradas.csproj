@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,30 +47,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Consultar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Consultar.Designer.cs">
+      <DependentUpon>Consultar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Depositos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Depositos.Designer.cs">
+      <DependentUpon>Depositos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registar.Designer.cs">
+      <DependentUpon>Registar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logotipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logotipo.Designer.cs">
+      <DependentUpon>Logotipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Consultar.resx">
+      <DependentUpon>Consultar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Depositos.resx">
+      <DependentUpon>Depositos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logotipo.resx">
+      <DependentUpon>Logotipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registar.resx">
+      <DependentUpon>Registar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,6 +200,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-eye-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Teste21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tipo de moeda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Euro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Libra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FecharFinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaximizarFinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizarFinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FecharFinal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizarFinal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaximizarFinal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FecharFinal2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FecharForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-question-mark-25.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
