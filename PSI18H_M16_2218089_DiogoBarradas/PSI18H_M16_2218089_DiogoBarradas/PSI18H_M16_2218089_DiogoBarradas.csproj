@@ -60,6 +60,24 @@
     <Compile Include="Depositos.Designer.cs">
       <DependentUpon>Depositos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lista.Designer.cs">
+      <DependentUpon>Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lista2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lista2.Designer.cs">
+      <DependentUpon>Lista2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lista3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lista3.Designer.cs">
+      <DependentUpon>Lista3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +109,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Depositos.resx">
       <DependentUpon>Depositos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista.resx">
+      <DependentUpon>Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista2.resx">
+      <DependentUpon>Lista2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista3.resx">
+      <DependentUpon>Lista3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Logotipo.resx">
       <DependentUpon>Logotipo.cs</DependentUpon>
@@ -246,6 +273,60 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Burger King.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cafe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KFC_logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-dote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-starbucks-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-ebay-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aliexpress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-deposit-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-withdrawal-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exchange-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-atm-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-safe-in-80.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

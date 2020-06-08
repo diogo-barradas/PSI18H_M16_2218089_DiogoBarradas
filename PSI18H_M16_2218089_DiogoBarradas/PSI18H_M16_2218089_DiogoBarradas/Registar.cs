@@ -114,12 +114,14 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text.Length == 0 && textBox4.Text.Length == 0 && textBox3.Text.Length == 0 && textBox1.Text.Length == 0)
+            if (textBox2.Text.Length < 4 || textBox4.Text.Length == 5 || textBox3.Text.Length == 5 || textBox1.Text.Length == 6 || textBox5.Text.Length == 8)
             {
-                MessageBox.Show("O ID e o PIN fornecidos não correspondem às informações em nossos registros.Verifique-as e tente novamente.");
+                MessageBox.Show("Todos os campos são obrigatórios!\nApresente a morada completa!!\nPIN = 4 Digitos");
             }
             else
             {
+                MessageBox.Show($"O seu id é 0000"); //Apareca o ID do utilizador que acabou de criar
+
                 connection.Open();
                 MySqlCommand command = new MySqlCommand("INSERT INTO registo(PIN, Idade, Email, Morada, Username) VALUE(@PIN, @Idade, @Email, @Morada, @Username)", connection);
 

@@ -189,5 +189,11 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             MinimizarApp.Image = Properties.Resources.MinimizarFinal1;
         }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            toolTip.SetToolTip(pictureBox2, "Selecione uma opção do menu !");
+        }
+
     }
 }

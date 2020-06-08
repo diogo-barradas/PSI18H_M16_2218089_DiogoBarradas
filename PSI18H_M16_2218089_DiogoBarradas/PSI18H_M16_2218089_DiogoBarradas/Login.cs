@@ -70,7 +70,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         //abrir novo form 
         private void button8_Click(object sender, EventArgs e)
         {
-            string user = textBox1.Text; // CRIAR UMA TEXTBOX PARA O USERNAME EM VEZ DO ID
+            string user = textBox1.Text; // Aparece o username do utilizador com aquele ID
 
             MySqlCommand command = new MySqlCommand("SELECT * FROM registo WHERE ID=@ID AND PIN=@PIN", connection);
 
@@ -99,7 +99,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
             catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message, "O ID e o PIN fornecidos não correspondem às informações em nossos registros. Verifique-as e tente novamente.");
+                MessageBox.Show(ex.Message, "Sem Conexão");
             }
         }
 
