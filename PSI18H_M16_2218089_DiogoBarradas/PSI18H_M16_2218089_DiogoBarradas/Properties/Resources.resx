@@ -133,14 +133,11 @@
   <data name="Cafe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cafe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Consultar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Consultar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KFC_logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KFC_logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo-dote" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-dote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Sair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,11 +151,11 @@
   <data name="MinimizarFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MinimizarFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Burger King" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Burger King.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Login1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MaximizarFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MaximizarFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FecharFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FecharFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +166,8 @@
   <data name="teste4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\teste4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo-dote" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo-dote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-safe-in-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-safe-in-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,17 +190,14 @@
   <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-atm-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-atm-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Pagamento" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pagamento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Burger King" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Burger King.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MaximizarFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaximizarFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FecharFinal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FecharFinal2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,11 +208,17 @@
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Levantar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Levantar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maximizar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maximizar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Euro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FecharForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FecharForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-atm-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-atm-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="olho2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\olho2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +229,14 @@
   <data name="Ex" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ex.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fechar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fechar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="crescer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crescer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Teste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Teste.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Medicos Mundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medicos Mundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-eye-15" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-eye-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +244,8 @@
   <data name="Teste2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Teste2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Levantar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Levantar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="KFC_logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KFC_logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,11 +256,14 @@
   <data name="icons8-question-mark-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-question-mark-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="olho3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\olho3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ex1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ex1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dollar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dollar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-ebay-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-ebay-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Aliexpress" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Aliexpress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,22 +280,22 @@
   <data name="Deposito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Deposito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="olho3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\olho3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Maximizar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maximizar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FecharForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FecharForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-withdrawal-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-withdrawal-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-ebay-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-ebay-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fechar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fechar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Teste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Teste.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dollar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dollar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-safe-in-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-safe-in-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nariz vermelho" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nariz vermelho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

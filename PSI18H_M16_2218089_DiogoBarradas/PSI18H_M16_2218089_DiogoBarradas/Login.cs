@@ -70,11 +70,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         //abrir novo form 
         private void button8_Click(object sender, EventArgs e)
         {
-            string user = textBox1.Text; // Aparece o username do utilizador com aquele ID
+            MySqlCommand command = new MySqlCommand("SELECT Username,ID,PIN FROM registo WHERE ID=@ID AND PIN=@PIN", connection);
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM registo WHERE ID=@ID AND PIN=@PIN", connection);
-
-            command.Parameters.AddWithValue("@ID",  textBox1.Text);
+            command.Parameters.AddWithValue("@ID", textBox1.Text);
             command.Parameters.AddWithValue("@PIN", textBox2.Text);
 
             try
@@ -84,7 +82,8 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
                 if (reader.Read())
                 {
-                    MessageBox.Show($"Bem-vindo {user}!");
+                    var user = reader.GetString(0);
+                    MessageBox.Show($"Bem-vindo {user} !");
                     this.Hide();
                     Menu menu = new Menu();
                     menu.ShowDialog();
@@ -93,7 +92,6 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                 {
                     MessageBox.Show("O ID e o PIN fornecidos não correspondem às informações em nossos registros.Verifique-as e tente novamente.");
                 }
-
                 connection.Close();
             }
 

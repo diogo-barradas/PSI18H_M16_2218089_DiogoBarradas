@@ -66,9 +66,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             }
             cn.Close();
         }
-        
+
         private void button3_Click(object sender, EventArgs e)
-        {         
+        {
             flowLayoutPanel1.Controls.Clear();
             cn.Open();
             cm = new MySqlCommand("SELECT Descriçao, Hora, Valor, idRemetente, idDestinatario FROM transferencias", cn);

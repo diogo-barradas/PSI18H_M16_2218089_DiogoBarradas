@@ -85,7 +85,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             }
         }
 
-         private void textBox5_Enter(object sender, EventArgs e)
+        private void textBox5_Enter(object sender, EventArgs e)
         {
             if (textBox5.Text == "Username")
             {
@@ -120,23 +120,33 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             }
             else
             {
-                MessageBox.Show($"O seu id é 0000"); //Apareca o ID do utilizador que acabou de criar
+                try
+                {
+                    connection.Open();
+                    MySqlCommand command = new MySqlCommand("INSERT INTO registo(PIN, Idade, Email, Morada, Username) VALUES(@PIN, @Idade, @Email, @Morada, @Username)", connection);
 
-                connection.Open();
-                MySqlCommand command = new MySqlCommand("INSERT INTO registo(PIN, Idade, Email, Morada, Username) VALUE(@PIN, @Idade, @Email, @Morada, @Username)", connection);
+                    command.Parameters.AddWithValue("@Username", textBox5.Text);
+                    command.Parameters.AddWithValue("@PIN", textBox2.Text);
+                    command.Parameters.AddWithValue("@Idade", textBox4.Text);
+                    command.Parameters.AddWithValue("@Email", textBox3.Text);
+                    command.Parameters.AddWithValue("@Morada", textBox1.Text);
 
-                command.Parameters.AddWithValue("@Username", textBox5.Text);
-                command.Parameters.AddWithValue("@PIN", textBox2.Text);
-                command.Parameters.AddWithValue("@Idade", textBox4.Text);
-                command.Parameters.AddWithValue("@Email", textBox3.Text);
-                command.Parameters.AddWithValue("@Morada", textBox1.Text);
+                    command.ExecuteNonQuery();
 
-                command.ExecuteNonQuery();
-                command.Connection.Close();
+                    MessageBox.Show($"O seu id é 0000"); //Apareca o ID do utilizador que acabou de criar
 
-                this.Hide();
-                Login login = new Login();
-                login.ShowDialog();
+                    this.Hide();
+                    Login login = new Login();
+                    login.ShowDialog();
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message, "Este utilizador já existe!");
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
         }
 

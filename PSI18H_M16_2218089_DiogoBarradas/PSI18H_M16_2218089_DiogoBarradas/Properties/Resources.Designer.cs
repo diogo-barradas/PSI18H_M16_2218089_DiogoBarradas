@@ -113,6 +113,16 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap crescer {
+            get {
+                object obj = ResourceManager.GetObject("crescer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Deposito {
             get {
                 object obj = ResourceManager.GetObject("Deposito", resourceCulture);
@@ -443,6 +453,16 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Medicos_Mundo {
+            get {
+                object obj = ResourceManager.GetObject("Medicos Mundo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Minimizar {
             get {
                 object obj = ResourceManager.GetObject("Minimizar", resourceCulture);
@@ -476,6 +496,16 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         internal static System.Drawing.Bitmap MinimizarFinal1 {
             get {
                 object obj = ResourceManager.GetObject("MinimizarFinal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nariz_vermelho {
+            get {
+                object obj = ResourceManager.GetObject("nariz vermelho", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

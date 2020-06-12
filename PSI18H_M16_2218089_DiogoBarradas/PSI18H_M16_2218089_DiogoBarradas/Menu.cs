@@ -131,7 +131,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         private void button4_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            
+            openChildForm(new Levantamentos());
             Slidepanel.Height = button4.Height;
             Slidepanel.Top = button4.Top;
         }
@@ -139,7 +139,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         private void button5_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            
+            openChildForm(new Transferências());
             Slidepanel.Height = button5.Height;
             Slidepanel.Top = button5.Top;
         }
@@ -147,7 +147,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         private void button6_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            
+            openChildForm(new Donativos());
             Slidepanel.Height = button6.Height;
             Slidepanel.Top = button6.Top;
         }
@@ -155,7 +155,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         private void button7_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            
+            openChildForm(new Terminar());
             Slidepanel.Height = button7.Height;
             Slidepanel.Top = button7.Top;
         }
