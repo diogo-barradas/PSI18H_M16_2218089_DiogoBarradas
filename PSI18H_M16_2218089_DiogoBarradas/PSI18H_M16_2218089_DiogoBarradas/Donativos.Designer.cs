@@ -624,7 +624,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.White;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::PSI18H_M16_2218089_DiogoBarradas.Properties.Resources.FecharFinal;
-            this.pictureBox5.Location = new System.Drawing.Point(43, 11);
+            this.pictureBox5.Location = new System.Drawing.Point(42, 12);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(25, 25);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

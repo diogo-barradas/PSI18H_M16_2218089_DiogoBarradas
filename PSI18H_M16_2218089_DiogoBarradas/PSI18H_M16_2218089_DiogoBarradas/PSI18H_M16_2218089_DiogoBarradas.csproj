@@ -48,12 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssCrescer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AssCrescer.Designer.cs">
-      <DependentUpon>AssCrescer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Consultar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,18 +90,6 @@
     <Compile Include="Lista3.Designer.cs">
       <DependentUpon>Lista3.cs</DependentUpon>
     </Compile>
-    <Compile Include="MedicosMundo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MedicosMundo.Designer.cs">
-      <DependentUpon>MedicosMundo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NarizVermelho.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NarizVermelho.Designer.cs">
-      <DependentUpon>NarizVermelho.cs</DependentUpon>
-    </Compile>
     <Compile Include="Registar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,9 +128,6 @@
     <Compile Include="Transferências.Designer.cs">
       <DependentUpon>Transferências.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AssCrescer.resx">
-      <DependentUpon>AssCrescer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Consultar.resx">
       <DependentUpon>Consultar.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,17 +152,11 @@
     <EmbeddedResource Include="Logotipo.resx">
       <DependentUpon>Logotipo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MedicosMundo.resx">
-      <DependentUpon>MedicosMundo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NarizVermelho.resx">
-      <DependentUpon>NarizVermelho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
