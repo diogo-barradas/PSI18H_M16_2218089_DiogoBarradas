@@ -107,7 +107,7 @@
             this.Name = "Logotipo";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Logotipo";
             ((System.ComponentModel.ISupportInitialize)(this.BankCapa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

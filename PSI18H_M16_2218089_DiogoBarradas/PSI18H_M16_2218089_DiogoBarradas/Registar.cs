@@ -114,9 +114,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text.Length < 4 || textBox4.Text.Length == 5 || textBox3.Text.Length == 5 || textBox1.Text.Length == 6 || textBox5.Text.Length == 8)
+            if (textBox1.Text == "Morada" || textBox2.Text == "OPIN" || textBox3.Text == "Email" || textBox4.Text == "Idade" || textBox5.Text == "Username" || textBox2.Text.Length < 4) 
             {
-                MessageBox.Show("Todos os campos são obrigatórios!\nApresente a morada completa!!\nPIN = 4 Digitos");
+                MessageBox.Show("Todos os campos são obrigatórios!\nPIN = 4 Digitos");
             }
             else
             {
