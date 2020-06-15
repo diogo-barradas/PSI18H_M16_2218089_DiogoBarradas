@@ -7,16 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace PSI18H_M16_2218089_DiogoBarradas
 {
     public partial class Depositos : Form
     {
+        MySqlConnection cnn = new MySqlConnection(@"server=127.0.0.1;uid=root;database=psi18h_m16_2218089_diogobarradas");
+
         public Depositos()
         {
             InitializeComponent();
             panel8.Visible = false;
             Saldo.Text = valorzero.ToString();
+
+            cnn.Open();
+            string bddepositos = "SELECT * FROM depositos";
+            MySqlCommand cmd = new MySqlCommand(bddepositos, cnn);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dataGridView1.DataSource = table;
         }
 
         private bool olho = false;
@@ -45,17 +56,32 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         public double valorzero = 00.00;
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == " Montante" || textBox1.Text == "")
+            try
             {
-                MessageBox.Show("Digite um valor !");
+                if (textBox1.Text == " Montante" || textBox1.Text == "")
+                {
+                    MessageBox.Show("Digite um valor !");
+                }
+                else
+                {
+                    double addvalor = double.Parse(textBox1.Text);
+                    if(addvalor <= 0)
+                    {
+                        MessageBox.Show("Introduza um valor válido");
+                    }
+                    else
+                    {
+                        double valorfinal = valorzero += addvalor;
+                        Saldo.Text = valorfinal.ToString();
+                        textBox1.Text = " Montante";
+                        MessageBox.Show($"{addvalor}€ foram Depositados!");
+                    }
+                }
             }
-            else
+            catch(Exception)
             {
-                double addvalor = double.Parse(textBox1.Text);
-                double valorfinal = valorzero += addvalor;
-                Saldo.Text = valorfinal.ToString();
-                textBox1.Text = " Montante";
-            }
+                MessageBox.Show("Digite somente numeros!");
+            }  
         }
 
         private void textBox1_Enter(object sender, EventArgs e)

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace PSI18H_M16_2218089_DiogoBarradas
 {
     public partial class Login : Form

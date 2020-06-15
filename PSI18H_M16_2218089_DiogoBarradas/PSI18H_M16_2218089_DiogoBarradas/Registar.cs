@@ -114,7 +114,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Morada" || textBox2.Text == "OPIN" || textBox3.Text == "Email" || textBox4.Text == "Idade" || textBox5.Text == "Username" || textBox2.Text.Length < 4) 
+            if (textBox1.Text == "Morada" || textBox2.Text == "OPIN" || textBox3.Text == "Email" || textBox4.Text == "Idade" || textBox5.Text == "Username" || textBox2.Text.Length != 4) 
             {
                 MessageBox.Show("Todos os campos são obrigatórios!\nPIN = 4 Digitos");
             }
@@ -122,26 +122,38 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             {
                 try
                 {
-                    connection.Open();
-                    MySqlCommand command = new MySqlCommand("INSERT INTO registo(PIN, Idade, Email, Morada, Username) VALUES(@PIN, @Idade, @Email, @Morada, @Username)", connection);
+                    int Idadeuser = int.Parse(textBox4.Text);
+                    if (Idadeuser < 18)
+                    {
+                        MessageBox.Show("A Idade minima deve ser 18 ");
+                    }
+                    else
+                    {
+                        connection.Open();
+                        MySqlCommand command = new MySqlCommand("INSERT INTO registo(PIN, Idade, Email, Morada, Username) VALUES(@PIN, @Idade, @Email, @Morada, @Username)", connection);
 
-                    command.Parameters.AddWithValue("@Username", textBox5.Text);
-                    command.Parameters.AddWithValue("@PIN", textBox2.Text);
-                    command.Parameters.AddWithValue("@Idade", textBox4.Text);
-                    command.Parameters.AddWithValue("@Email", textBox3.Text);
-                    command.Parameters.AddWithValue("@Morada", textBox1.Text);
+                        command.Parameters.AddWithValue("@Username", textBox5.Text);
+                        command.Parameters.AddWithValue("@PIN", textBox2.Text);
+                        command.Parameters.AddWithValue("@Idade", textBox4.Text);
+                        command.Parameters.AddWithValue("@Email", textBox3.Text);
+                        command.Parameters.AddWithValue("@Morada", textBox1.Text);
 
-                    command.ExecuteNonQuery();
+                        command.ExecuteNonQuery();
 
-                    MessageBox.Show($"O seu id é 0000"); //Apareca o ID do utilizador que acabou de criar
+                        MessageBox.Show($"O seu id é 0000"); //Apareca o ID do utilizador que acabou de criar
 
-                    this.Hide();
-                    Login login = new Login();
-                    login.ShowDialog();
+                        this.Hide();
+                        Login login = new Login();
+                        login.ShowDialog();
+                    }              
                 }
                 catch (MySqlException ex)
                 {
                     MessageBox.Show(ex.Message, "Este utilizador já existe!");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Reveja os seus Dados");
                 }
                 finally
                 {

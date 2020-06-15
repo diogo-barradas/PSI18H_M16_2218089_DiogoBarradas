@@ -66,7 +66,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(580, 12);
+            this.button1.Location = new System.Drawing.Point(582, 15);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 25);
             this.button1.TabIndex = 19;
@@ -83,7 +83,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(451, 12);
+            this.button2.Location = new System.Drawing.Point(453, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 25);
             this.button2.TabIndex = 20;
@@ -100,7 +100,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(322, 12);
+            this.button3.Location = new System.Drawing.Point(324, 15);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 25);
             this.button3.TabIndex = 18;
@@ -114,7 +114,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.ForeColor = System.Drawing.Color.Gray;
-            this.panel2.Location = new System.Drawing.Point(305, 5);
+            this.panel2.Location = new System.Drawing.Point(307, 8);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(415, 40);
             this.panel2.TabIndex = 0;
