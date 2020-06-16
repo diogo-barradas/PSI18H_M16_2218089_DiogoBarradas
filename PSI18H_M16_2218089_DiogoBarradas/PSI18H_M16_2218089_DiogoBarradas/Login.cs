@@ -85,6 +85,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                 {
                     var user = reader.GetString(0);
                     MessageBox.Show($"Bem-vindo {user} !");
+                    Class1.iduser = int.Parse(textBox1.Text);
                     this.Hide();
                     Menu menu = new Menu();
                     menu.ShowDialog();
@@ -108,6 +109,11 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             this.Hide();
             Registar regist = new Registar();
             regist.ShowDialog();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

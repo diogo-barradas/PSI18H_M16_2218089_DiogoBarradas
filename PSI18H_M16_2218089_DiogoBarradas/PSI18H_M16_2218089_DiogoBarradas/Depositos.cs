@@ -19,7 +19,6 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             InitializeComponent();
             panel8.Visible = false;
-            Saldo.Text = valorzero.ToString();
 
             cnn.Open();
             string bddepositos = "SELECT * FROM depositos";
@@ -28,6 +27,15 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             DataTable table = new DataTable();
             adapter.Fill(table);
             dataGridView1.DataSource = table;
+            cnn.Close();
+
+            MySqlCommand command = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", cnn);
+            cnn.Open();
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            _saldo = reader.GetDouble(0);
+            Saldo.Text = _saldo.ToString();
+            cnn.Close();
         }
 
         private bool olho = false;
@@ -53,14 +61,14 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             this.Close();
         }
 
-        public double valorzero = 00.00;
+        public double _saldo;
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if (textBox1.Text == " Montante" || textBox1.Text == "")
+                if (textBox1.Text == " Montante" || textBox2.Text == " HH:MM" || textBox3.Text == " ex.Depósito")
                 {
-                    MessageBox.Show("Digite um valor !");
+                    MessageBox.Show("Todos os campos são obrigatórios!");
                 }
                 else
                 {
@@ -70,10 +78,24 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                         MessageBox.Show("Introduza um valor válido");
                     }
                     else
-                    {
-                        double valorfinal = valorzero += addvalor;
-                        Saldo.Text = valorfinal.ToString();
-                        textBox1.Text = " Montante";
+                    {                      
+                        double saldofinal = _saldo += addvalor;
+                        Saldo.Text = saldofinal.ToString();
+
+                        MySqlDataAdapter adapter = new MySqlDataAdapter();
+                        try
+                        {
+                            cnn.Open();
+                            adapter.UpdateCommand = cnn.CreateCommand();
+                            adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = {saldofinal} WHERE (ID = {Class1.iduser})");
+                            adapter.UpdateCommand.ExecuteNonQuery();
+                            cnn.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Notificação");
+                        }
+
                         MessageBox.Show($"{addvalor}€ foram Depositados!");
                     }
                 }
@@ -97,6 +119,38 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             if (textBox1.Text == "")
             {
                 textBox1.Text = " Montante";
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (textBox2.Text == " HH:MM")
+            {
+                textBox2.Text = "";
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = " HH:MM";
+            }
+        }
+
+        private void textBox3_Enter(object sender, EventArgs e)
+        {
+            if (textBox3.Text == " ex.Depósito")
+            {
+                textBox3.Text = "";
+            }
+        }
+
+        private void textBox3_Leave(object sender, EventArgs e)
+        {
+            if (textBox3.Text == "")
+            {
+                textBox3.Text = " ex.Depósito";
             }
         }
     }

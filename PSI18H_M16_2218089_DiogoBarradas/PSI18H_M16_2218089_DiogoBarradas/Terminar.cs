@@ -36,7 +36,6 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             //FECHAR O MENU POR BAIXO 
             this.Close();
-            Thread.Sleep(1100);
             Login login = new Login();
             login.ShowDialog();
         }
@@ -45,7 +44,6 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             //FECHAR O MENU POR BAIXO 
             this.Close();
-            Thread.Sleep(1100);
             Registar registo = new Registar();
             registo.ShowDialog();
         }

@@ -168,5 +168,10 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             Login login = new Login();
             login.ShowDialog();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
