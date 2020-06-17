@@ -29,28 +29,61 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void Sair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Tem a certeza que deseja sair da aplicação?", "Fechar Bank$Acc", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void Sessao_Click(object sender, EventArgs e)
         {
-            //FECHAR O MENU POR BAIXO 
-            this.Close();
-            Login login = new Login();
-            login.ShowDialog();
+            if (MessageBox.Show("Tem a certeza que deseja terminar sessão?", "Terminar Sessão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                Login login = new Login();
+                login.ShowDialog();
+            }
+                
         }
 
         private void Adicionar_Click(object sender, EventArgs e)
         {
-            //FECHAR O MENU POR BAIXO 
-            this.Close();
-            Registar registo = new Registar();
-            registo.ShowDialog();
+            if (MessageBox.Show("Tem a certeza que deseja adicionar uma nova conta?", "Adicionar Conta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                Registar registo = new Registar();
+                registo.ShowDialog();
+            }
         }
 
         private void Eliminar_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Tem a certeza que deseja excluir permanentemente a sua conta?", "Excluir a minha Conta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                connection.Open();
 
+                MySqlCommand comand = new MySqlCommand($"DELETE FROM depositos WHERE(ID = {Class1.iduser})", connection);
+                comand.ExecuteNonQuery();
+
+                MySqlCommand comad = new MySqlCommand($"DELETE FROM levantamentos WHERE(ID = {Class1.iduser})", connection);
+                comad.ExecuteNonQuery();
+
+                MySqlCommand cmad = new MySqlCommand($"DELETE FROM transferencias WHERE(ID = {Class1.iduser})", connection);
+                cmad.ExecuteNonQuery();
+
+                MySqlCommand command = new MySqlCommand($"DELETE FROM registo WHERE(ID = {Class1.iduser})", connection);
+                command.ExecuteNonQuery();
+
+                connection.Close();
+
+                MessageBox.Show("A sua conta foi Eliminada!");
+                Thread.Sleep(500);
+
+                //voltar ao login
+                this.Close();
+                Login login = new Login();
+                login.ShowDialog();
+            }         
         }
     }
 }

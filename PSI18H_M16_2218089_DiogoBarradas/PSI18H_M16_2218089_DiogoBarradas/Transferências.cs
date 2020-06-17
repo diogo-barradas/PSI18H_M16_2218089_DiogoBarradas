@@ -22,7 +22,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             tempo.Visible = false;
 
             cnn.Open();
-            string bdtranferencias = $"SELECT Descriçao, Hora, Valor, idDestinatario, idRemetente FROM transferencias WHERE (ID = {Class1.iduser})";
+            string bdtranferencias = $"SELECT Descriçao, Hora, Valor, idDestinatario, ID FROM transferencias WHERE (ID = {Class1.iduser})";
             MySqlCommand cmd = new MySqlCommand(bdtranferencias, cnn);
             MySqlDataAdapter antiga = new MySqlDataAdapter(cmd);
             DataTable table = new DataTable();
@@ -107,15 +107,16 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                             tempo.Text = DateTime.Now.ToShortTimeString();//recebe a hora atual
 
                             cnn.Open();
-                            MySqlCommand comando = new MySqlCommand($"INSERT INTO transferencias(Descriçao, Valor, ID) VALUES (@Descriçao, @Valor, {Class1.iduser})", cnn);
+                            MySqlCommand comando = new MySqlCommand($"INSERT INTO transferencias(Descriçao, Valor, ID, idDestinatario) VALUES (@Descriçao, @Valor, {Class1.iduser}, @idDestinatario)", cnn);
                             comando.Parameters.AddWithValue("@Descriçao", textBox3.Text);
                             comando.Parameters.AddWithValue("@Valor", textBox1.Text);
                             comando.Parameters.AddWithValue("@Hora", tempo.Text);
+                            //comando.Parameters.AddWithValue("@idDestinatario", textBox4.Text);
 
                             comando.ExecuteNonQuery();
 
                             //atualizar o dataGrid
-                            string bdtranferencias = $"SELECT Descriçao, Hora, Valor, idDestinatario, idRemetente FROM transferencias WHERE (ID = {Class1.iduser})";
+                            string bdtranferencias = $"SELECT Descriçao, Hora, Valor, idDestinatario, ID FROM transferencias WHERE (ID = {Class1.iduser})";
                             MySqlCommand cmd = new MySqlCommand(bdtranferencias, cnn);
                             MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
                             DataTable table = new DataTable();

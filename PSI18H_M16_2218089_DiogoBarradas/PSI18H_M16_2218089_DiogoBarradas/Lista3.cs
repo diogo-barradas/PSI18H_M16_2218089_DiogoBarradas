@@ -23,7 +23,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         private string _Hora;
         private string _Valor;
         private string _IDdestinatario;
-        private string _IDremetente;
+        private string _ID;
 
         public string NNomeEmpresa
         {
@@ -48,10 +48,10 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             get { return _IDdestinatario; }
             set { _IDdestinatario = value; IDdestinatario.Text = value; }
         }
-        public string IIDremetente
+        public string IID
         {
-            get { return _IDremetente; }
-            set { _IDremetente = value; IDremetente.Text = value; }
+            get { return _ID; }
+            set { _ID = value; IDremetente.Text = value; }
         }
     }
 }
