@@ -35,7 +35,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             flowLayoutPanel1.Controls.Clear();
             cn.Open();
-            cm = new MySqlCommand("SELECT Descriçao, Hora, Valor FROM depositos", cn);
+            cm = new MySqlCommand($"SELECT Descriçao, Hora, Valor FROM depositos WHERE (ID = {Class1.iduser})", cn);
             dt = cm.ExecuteReader();
             while (dt.Read())
             {
@@ -53,7 +53,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             flowLayoutPanel1.Controls.Clear();
             cn.Open();
-            cm = new MySqlCommand("SELECT Descriçao, Hora, Valor FROM levantamentos", cn);
+            cm = new MySqlCommand($"SELECT Descriçao, Hora, Valor FROM levantamentos WHERE (ID = {Class1.iduser})", cn);
             dt = cm.ExecuteReader();
             while (dt.Read())
             {
@@ -71,7 +71,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             flowLayoutPanel1.Controls.Clear();
             cn.Open();
-            cm = new MySqlCommand("SELECT Descriçao, Hora, Valor, idRemetente, idDestinatario FROM transferencias", cn);
+            cm = new MySqlCommand($"SELECT Descriçao, Hora, Valor, idRemetente, idDestinatario FROM transferencias WHERE (ID = {Class1.iduser})", cn);
             dt = cm.ExecuteReader();
             while (dt.Read())
             {

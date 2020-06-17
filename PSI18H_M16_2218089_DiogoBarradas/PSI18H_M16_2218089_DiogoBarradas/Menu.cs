@@ -25,6 +25,21 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             Slidepanel.Top = button1.Top;
         }
 
+        private void button9_MouseClick(object sender, MouseEventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
+        private void button11_MouseClick(object sender, MouseEventArgs e)
+        {
+            panel1.Visible = false;
+        }
+
         //Minimizar App
         private void MinimizarApp_Click(object sender, EventArgs e)
         {
@@ -82,22 +97,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             }
             Slidepanel.Height = button1.Height;
             Slidepanel.Top = button1.Top;
-        }
-
-        private void button9_MouseClick(object sender, MouseEventArgs e)
-        {
-            panel1.Visible = false;
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            panel1.Visible = false;
-        }
-
-        private void button11_MouseClick(object sender, MouseEventArgs e)
-        {
-            panel1.Visible = false;
-        }
+        }     
 
         //MDI
         private Form activeForm = null;

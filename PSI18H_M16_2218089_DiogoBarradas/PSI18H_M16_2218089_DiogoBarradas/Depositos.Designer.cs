@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Depositos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tempo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -59,6 +61,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.tempo);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.panel8);
@@ -73,6 +77,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 488);
             this.panel1.TabIndex = 0;
+            // 
+            // tempo
+            // 
+            this.tempo.AutoSize = true;
+            this.tempo.Location = new System.Drawing.Point(302, 24);
+            this.tempo.Name = "tempo";
+            this.tempo.Size = new System.Drawing.Size(0, 13);
+            this.tempo.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(306, 157);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 12);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "* Valor a Depositar";
             // 
             // label5
             // 
@@ -306,5 +330,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label tempo;
     }
 }

@@ -19,6 +19,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             InitializeComponent();
             panel8.Visible = false;
+            tempo.Visible = false;
 
             cnn.Open();
             string bddepositos = $"SELECT Descriçao, Hora, Valor FROM depositos WHERE (ID = {Class1.iduser})";
@@ -73,12 +74,12 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                 else
                 {
                     double addvalor = double.Parse(textBox1.Text);
-                    if(addvalor <= 0)
+                    if (addvalor <= 0)
                     {
                         MessageBox.Show("Introduza um valor válido");
                     }
                     else
-                    {                      
+                    {
                         double saldofinal = _saldo += addvalor;
                         Saldo.Text = saldofinal.ToString();
 
@@ -95,14 +96,19 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                         {
                             MessageBox.Show(ex.Message, "Notificação");
                         }
-
+                        
                         MessageBox.Show($"{addvalor}€ foram Depositados!");
-
+                        tempo.Text = DateTime.Now.ToShortTimeString();//recebe a hora atual
+                        
                         cnn.Open();
-                        MySqlCommand comando = new MySqlCommand($"INSERT INTO depositos(Descriçao, Valor, ID) VALUES (@Descriçao, @Valor, {Class1.iduser})", cnn);
+                        MySqlCommand comando = new MySqlCommand($"INSERT INTO depositos(Descriçao, Valor, ID, Hora) VALUES (@Descriçao, @Valor, {Class1.iduser}, @Hora)", cnn);
                         comando.Parameters.AddWithValue("@Descriçao", textBox3.Text);
                         comando.Parameters.AddWithValue("@Valor", textBox1.Text);
+                        comando.Parameters.AddWithValue("@Hora", tempo.Text);
+
                         comando.ExecuteNonQuery();
+
+                        //atualizar o dataGrid
                         string bddepositos = $"SELECT Descriçao, Hora, Valor FROM depositos WHERE (ID = {Class1.iduser})";
                         MySqlCommand cmd = new MySqlCommand(bddepositos, cnn);
                         MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
@@ -115,7 +121,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                     }
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Digite somente numeros!");
             }  
@@ -152,5 +158,6 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                 textBox3.Text = " ex.Depósito";
             }
         }
+
     }
 }
