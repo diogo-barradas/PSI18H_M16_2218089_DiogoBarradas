@@ -21,16 +21,15 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             panel8.Visible = false;
 
             cnn.Open();
-            string bddepositos = "SELECT * FROM depositos";
+            string bddepositos = $"SELECT Descriçao, Hora, Valor FROM depositos WHERE (ID = {Class1.iduser})";
             MySqlCommand cmd = new MySqlCommand(bddepositos, cnn);
-            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            MySqlDataAdapter antiga = new MySqlDataAdapter(cmd);
             DataTable table = new DataTable();
-            adapter.Fill(table);
+            antiga.Fill(table);
             dataGridView1.DataSource = table;
-            cnn.Close();
+            
 
             MySqlCommand command = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", cnn);
-            cnn.Open();
             MySqlDataReader reader = command.ExecuteReader();
             reader.Read();
             _saldo = reader.GetDouble(0);
@@ -62,11 +61,12 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         }
 
         public double _saldo;
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                if (textBox1.Text == " Montante" || textBox2.Text == " HH:MM" || textBox3.Text == " ex.Depósito")
+                if (textBox1.Text == " Montante" || textBox3.Text == " ex.Depósito")
                 {
                     MessageBox.Show("Todos os campos são obrigatórios!");
                 }
@@ -97,6 +97,21 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                         }
 
                         MessageBox.Show($"{addvalor}€ foram Depositados!");
+
+                        cnn.Open();
+                        MySqlCommand comando = new MySqlCommand($"INSERT INTO depositos(Descriçao, Valor, ID) VALUES (@Descriçao, @Valor, {Class1.iduser})", cnn);
+                        comando.Parameters.AddWithValue("@Descriçao", textBox3.Text);
+                        comando.Parameters.AddWithValue("@Valor", textBox1.Text);
+                        comando.ExecuteNonQuery();
+                        string bddepositos = $"SELECT Descriçao, Hora, Valor FROM depositos WHERE (ID = {Class1.iduser})";
+                        MySqlCommand cmd = new MySqlCommand(bddepositos, cnn);
+                        MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
+                        DataTable table = new DataTable();
+                        nova.Fill(table);
+                        dataGridView1.DataSource = table;
+                        cnn.Close();
+                        textBox1.Text = " Montante";
+                        textBox3.Text = " ex.Depósito";
                     }
                 }
             }
@@ -119,22 +134,6 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             if (textBox1.Text == "")
             {
                 textBox1.Text = " Montante";
-            }
-        }
-
-        private void textBox2_Enter(object sender, EventArgs e)
-        {
-            if (textBox2.Text == " HH:MM")
-            {
-                textBox2.Text = "";
-            }
-        }
-
-        private void textBox2_Leave(object sender, EventArgs e)
-        {
-            if (textBox2.Text == "")
-            {
-                textBox2.Text = " HH:MM";
             }
         }
 

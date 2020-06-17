@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Terminar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.Sair = new System.Windows.Forms.Button();
             this.Sessao = new System.Windows.Forms.Button();
             this.Eliminar = new System.Windows.Forms.Button();
@@ -46,7 +45,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Sair);
             this.panel1.Controls.Add(this.Sessao);
             this.panel1.Controls.Add(this.Eliminar);
@@ -55,14 +53,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 488);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(564, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 4;
             // 
             // Sair
             // 
@@ -145,7 +135,6 @@
             this.Name = "Terminar";
             this.Text = "Terminar";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,6 +149,5 @@
         private System.Windows.Forms.Button Sessao;
         private System.Windows.Forms.Button Eliminar;
         private System.Windows.Forms.Button Adicionar;
-        private System.Windows.Forms.Label label1;
     }
 }

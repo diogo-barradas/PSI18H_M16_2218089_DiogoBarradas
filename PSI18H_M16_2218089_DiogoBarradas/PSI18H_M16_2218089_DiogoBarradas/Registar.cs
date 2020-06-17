@@ -130,7 +130,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                     else
                     {
                         connection.Open();
-                        MySqlCommand command = new MySqlCommand("INSERT INTO registo(PIN, Idade, Email, Morada, Username) VALUES(@PIN, @Idade, @Email, @Morada, @Username)", connection);
+                        MySqlCommand command = new MySqlCommand("INSERT INTO registo(PIN, Idade, Email, Morada, Username, Saldo) VALUES(@PIN, @Idade, @Email, @Morada, @Username, 0)", connection);
 
                         command.Parameters.AddWithValue("@Username", textBox5.Text);
                         command.Parameters.AddWithValue("@PIN", textBox2.Text);
