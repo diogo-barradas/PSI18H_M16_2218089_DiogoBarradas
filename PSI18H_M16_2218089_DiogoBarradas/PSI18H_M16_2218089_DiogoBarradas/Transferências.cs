@@ -28,8 +28,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             DataTable table = new DataTable();
             antiga.Fill(table);
             dataGridView1.DataSource = table;
+            cnn.Close();
 
-
+            cnn.Open();
             MySqlCommand command = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", cnn);
             MySqlDataReader reader = command.ExecuteReader();
             reader.Read();
@@ -94,72 +95,76 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                             }
                             else
                             {
-                                cnn.Open();
-                                MySqlCommand xpto = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {_iddestino})", cnn);
-                                MySqlDataReader abc = xpto.ExecuteReader();
-                                abc.Read();
-                                _saldodestino = abc.GetDouble(0);
-                                cnn.Close();
-
-                                double saldofinal = _saldo -= transferirvalor;
-                                double saldofinaldestino = _saldodestino += transferirvalor;
-                                Saldo.Text = saldofinal.ToString();
-
-
-                                MySqlDataAdapter adapter = new MySqlDataAdapter();
                                 try
                                 {
                                     cnn.Open();
-                                    adapter.UpdateCommand = cnn.CreateCommand();
-                                    adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = {saldofinal} WHERE (ID = {Class1.iduser})");
-                                    adapter.UpdateCommand.ExecuteNonQuery();
-                                    cnn.Close();
+                                    MySqlCommand xpto = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {_iddestino})", cnn);
+                                    MySqlDataReader abc = xpto.ExecuteReader();
+                                    if (abc.Read())
+                                    {
+                                        _saldodestino = abc.GetDouble(0);
+                                        double saldofinal = _saldo -= transferirvalor;
+                                        double saldofinaldestino = _saldodestino += transferirvalor;
+                                        Saldo.Text = saldofinal.ToString();
+                                        cnn.Close();
 
-                                    //acrescentar valor ao idDestinatario
-                                    cnn.Open();
-                                    adapter.UpdateCommand = cnn.CreateCommand();
-                                    adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = {saldofinaldestino} WHERE (ID = {_iddestino})");
-                                    adapter.UpdateCommand.ExecuteNonQuery();
-                                    cnn.Close();
+                                        cnn.Open();
+                                        MySqlDataAdapter adapter = new MySqlDataAdapter();
+                                        
+                                        adapter.UpdateCommand = cnn.CreateCommand();
+                                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = {saldofinal} WHERE (ID = {Class1.iduser})");
+                                        adapter.UpdateCommand.ExecuteNonQuery();
+
+                                        //acrescentar valor ao idDestinatario
+                                        adapter.UpdateCommand = cnn.CreateCommand();
+                                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = {saldofinaldestino} WHERE (ID = {_iddestino})");
+                                        adapter.UpdateCommand.ExecuteNonQuery();
+
+                                        MessageBox.Show($"{transferirvalor}€ foram Transferidos!");
+                                        tempo.Text = DateTime.Now.ToShortTimeString();//recebe a hora atual
+
+                                        MySqlCommand comando = new MySqlCommand($"INSERT INTO transferencias(Descriçao, Valor, Hora, ID, idDestinatario) VALUES (@Descriçao, @Valor, @Hora, {Class1.iduser}, {_iddestino})", cnn);
+                                        comando.Parameters.AddWithValue("@Descriçao", textBox3.Text);
+                                        comando.Parameters.AddWithValue("@Valor", textBox1.Text);
+                                        comando.Parameters.AddWithValue("@Hora", tempo.Text);
+                                        comando.Parameters.AddWithValue("@idDestinatario", textBox2.Text);
+
+                                        comando.ExecuteNonQuery();
+
+                                        //atualizar o dataGrid
+                                        string bdtranferencias = $"SELECT Descriçao, Hora, Valor, idDestinatario FROM transferencias WHERE (ID = {Class1.iduser})";
+                                        MySqlCommand cmd = new MySqlCommand(bdtranferencias, cnn);
+                                        MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
+                                        DataTable table = new DataTable();
+                                        nova.Fill(table);
+                                        dataGridView1.DataSource = table;
+
+                                        textBox1.Text = " Montante";
+                                        textBox3.Text = " ex.Transferências";
+                                        textBox2.Text = " ID Destinatário";
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Não existe um utilizador com este ID!");
+                                    }
+                                    
                                 }
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show(ex.Message, "Notificação");
                                 }
-
-                                MessageBox.Show($"{transferirvalor}€ foram Transferidos!");
-                                tempo.Text = DateTime.Now.ToShortTimeString();//recebe a hora atual
-
-                                cnn.Open();
-                                MySqlCommand comando = new MySqlCommand($"INSERT INTO transferencias(Descriçao, Valor, Hora, ID, idDestinatario) VALUES (@Descriçao, @Valor, @Hora, {Class1.iduser}, {_iddestino})", cnn);
-                                comando.Parameters.AddWithValue("@Descriçao", textBox3.Text);
-                                comando.Parameters.AddWithValue("@Valor", textBox1.Text);
-                                comando.Parameters.AddWithValue("@Hora", tempo.Text);
-                                comando.Parameters.AddWithValue("@idDestinatario", textBox2.Text);
-
-                                comando.ExecuteNonQuery();
-
-                                //atualizar o dataGrid
-                                string bdtranferencias = $"SELECT Descriçao, Hora, Valor, idDestinatario FROM transferencias WHERE (ID = {Class1.iduser})";
-                                MySqlCommand cmd = new MySqlCommand(bdtranferencias, cnn);
-                                MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
-                                DataTable table = new DataTable();
-                                nova.Fill(table);
-                                dataGridView1.DataSource = table;
-                                cnn.Close();
-
-                                textBox1.Text = " Montante";
-                                textBox3.Text = " ex.Transferências";
-                                textBox2.Text = " ID Destinatário";
-
+                                finally
+                                {
+                                    cnn.Close();
+                                }
                             }
                         }
                     }
                 }
             }
-            catch (MySqlException)
+            catch (MySqlException ex)
             {
-                MessageBox.Show("Não existe um utilizador com este ID!");
+                MessageBox.Show(ex.Message, "Notificação");
             }
             catch (Exception)
             {

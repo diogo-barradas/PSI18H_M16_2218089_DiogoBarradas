@@ -118,7 +118,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             {
                 MessageBox.Show("Todos os campos são obrigatórios!\nPIN = 4 Digitos");
             }
-            else
+            else if (textBox3.Text.Contains("@") && textBox3.Text.Contains("."))
             {
                 try
                 {
@@ -159,6 +159,10 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                 {
                     connection.Close();
                 }
+            }
+            else
+            {
+                MessageBox.Show("O email deve conter @ e .com");
             }
         }
 
