@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ImagemLista = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ImagemLista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.Valor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Valor.AutoSize = true;
             this.Valor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Valor.Location = new System.Drawing.Point(517, 39);
+            this.Valor.Location = new System.Drawing.Point(529, 39);
             this.Valor.Name = "Valor";
             this.Valor.Size = new System.Drawing.Size(0, 16);
             this.Valor.TabIndex = 2;
@@ -72,9 +73,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.Location = new System.Drawing.Point(137, 94);
+            this.panel1.Location = new System.Drawing.Point(120, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 2);
+            this.panel1.Size = new System.Drawing.Size(480, 2);
             this.panel1.TabIndex = 4;
             // 
             // label2
@@ -124,16 +125,28 @@
             this.ImagemLista.TabIndex = 3;
             this.ImagemLista.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(517, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(19, 16);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "+";
+            // 
             // Lista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Valor);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ImagemLista);
-            this.Controls.Add(this.Valor);
             this.Controls.Add(this.Hora);
             this.Controls.Add(this.Nome);
             this.Name = "Lista";
@@ -154,5 +167,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }

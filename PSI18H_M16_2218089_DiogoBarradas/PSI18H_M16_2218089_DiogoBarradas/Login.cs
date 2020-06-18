@@ -101,6 +101,10 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             {
                 MessageBox.Show(ex.Message, "Sem Conexão");
             }
+            catch (Exception ox)
+            {
+                MessageBox.Show(ox.Message, "Notificação");
+            }
         }
 
         //abrir novo form 

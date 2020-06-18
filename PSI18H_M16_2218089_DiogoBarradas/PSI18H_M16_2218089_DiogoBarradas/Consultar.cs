@@ -71,7 +71,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             flowLayoutPanel1.Controls.Clear();
             cn.Open();
-            cm = new MySqlCommand($"SELECT Descriçao, Hora, Valor, ID, idDestinatario FROM transferencias WHERE (ID = {Class1.iduser})", cn);
+            cm = new MySqlCommand($"SELECT Descriçao, Hora, Valor, ID, idDestinatario FROM transferencias WHERE (ID = {Class1.iduser}) OR (idDestinatario = {Class1.iduser})", cn);
             dt = cm.ExecuteReader();
             while (dt.Read())
             {
