@@ -63,6 +63,16 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aada {
+            get {
+                object obj = ResourceManager.GetObject("aada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add {
             get {
                 object obj = ResourceManager.GetObject("add", resourceCulture);
@@ -96,6 +106,16 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         internal static System.Drawing.Bitmap Cafe {
             get {
                 object obj = ResourceManager.GetObject("Cafe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap closefinal5 {
+            get {
+                object obj = ResourceManager.GetObject("closefinal5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +186,56 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         internal static System.Drawing.Bitmap Ex1 {
             get {
                 object obj = ResourceManager.GetObject("Ex1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exiiit {
+            get {
+                object obj = ResourceManager.GetObject("exiiit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exitfinal {
+            get {
+                object obj = ResourceManager.GetObject("exitfinal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exitfinal1 {
+            get {
+                object obj = ResourceManager.GetObject("exitfinal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exitfinalo {
+            get {
+                object obj = ResourceManager.GetObject("exitfinalo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exot {
+            get {
+                object obj = ResourceManager.GetObject("exot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +356,16 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         internal static System.Drawing.Bitmap icons8_exchange_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8-exchange-80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_exit_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-exit-25", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

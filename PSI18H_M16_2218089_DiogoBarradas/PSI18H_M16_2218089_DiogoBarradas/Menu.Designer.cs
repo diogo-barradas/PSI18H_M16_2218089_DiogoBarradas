@@ -303,6 +303,7 @@
             this.panel2.Controls.Add(this.MinimizarApp);
             this.panel2.Controls.Add(this.MaximizarApp);
             this.panel2.Controls.Add(this.FecharApp);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(924, 27);

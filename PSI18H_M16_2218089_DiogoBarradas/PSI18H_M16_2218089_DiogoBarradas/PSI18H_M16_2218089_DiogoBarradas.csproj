@@ -67,6 +67,12 @@
     <Compile Include="Donativos.Designer.cs">
       <DependentUpon>Donativos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Levantamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Donativos.resx">
       <DependentUpon>Donativos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Levantamentos.resx">
       <DependentUpon>Levantamentos.cs</DependentUpon>
@@ -373,6 +382,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nariz vermelho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exiiit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitfinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitfinalo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitfinal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closefinal5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

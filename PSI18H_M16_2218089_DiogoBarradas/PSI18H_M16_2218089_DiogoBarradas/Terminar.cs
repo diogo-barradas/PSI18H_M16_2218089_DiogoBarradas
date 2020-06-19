@@ -39,7 +39,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             if (MessageBox.Show("Tem a certeza que deseja terminar sessão?", "Terminar Sessão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
                 Login login = new Login();
                 login.ShowDialog();
             }
@@ -50,7 +50,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             if (MessageBox.Show("Tem a certeza que deseja adicionar uma nova conta?", "Adicionar Conta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                this.Close();
+                this.Hide();
                 Registar registo = new Registar();
                 registo.ShowDialog();
             }
@@ -77,10 +77,10 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                 connection.Close();
 
                 MessageBox.Show("A sua conta foi Eliminada!");
-                Thread.Sleep(500);
+                Thread.Sleep(1500);
 
                 //voltar ao login
-                this.Close();
+                this.Hide();
                 Login login = new Login();
                 login.ShowDialog();
             }         

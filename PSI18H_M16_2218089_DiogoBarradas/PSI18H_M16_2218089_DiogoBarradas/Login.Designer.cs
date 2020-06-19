@@ -78,7 +78,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::PSI18H_M16_2218089_DiogoBarradas.Properties.Resources.FecharFinal1;
+            this.pictureBox2.Image = global::PSI18H_M16_2218089_DiogoBarradas.Properties.Resources.closefinal5;
             this.pictureBox2.Location = new System.Drawing.Point(300, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(15, 15);
@@ -86,6 +86,8 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // checkBox1
             // 

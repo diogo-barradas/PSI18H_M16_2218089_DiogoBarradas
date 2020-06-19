@@ -83,12 +83,33 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
                 if (reader.Read())
                 {
-                    var user = reader.GetString(0);
-                    MessageBox.Show($"Bem-vindo {user} !");
-                    Class1.iduser = int.Parse(textBox1.Text);
-                    this.Hide();
-                    Menu menu = new Menu();
-                    menu.ShowDialog();
+                    if (textBox1.Text == "1" && textBox2.Text == "1234")
+                    {
+                        var user = reader.GetString(0);
+                        Class1.iduser = int.Parse(textBox1.Text);
+
+                        if (MessageBox.Show($"Bem-Vindo {user} !, Deseja consultar a visão de Moderador?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            this.Hide();
+                            FormAdmin admin = new FormAdmin();
+                            admin.ShowDialog();
+                        }
+                        else
+                        {
+                            this.Hide();
+                            Menu menuguest = new Menu();
+                            menuguest.ShowDialog();
+                        }                        
+                    }
+                    else
+                    {
+                        var user = reader.GetString(0);
+                        MessageBox.Show($"Bem-Vindo {user} !");
+                        Class1.iduser = int.Parse(textBox1.Text);
+                        this.Hide();
+                        Menu menu = new Menu();
+                        menu.ShowDialog();
+                    }
                 }
                 else
                 {
@@ -118,6 +139,16 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Image = Properties.Resources.FecharFinal1;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Image = Properties.Resources.closefinal5;
         }
     }
 }
