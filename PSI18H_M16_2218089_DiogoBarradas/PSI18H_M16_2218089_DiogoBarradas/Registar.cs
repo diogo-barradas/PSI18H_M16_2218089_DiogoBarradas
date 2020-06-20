@@ -125,7 +125,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                     int Idadeuser = int.Parse(textBox4.Text);
                     if (Idadeuser < 18)
                     {
-                        MessageBox.Show("A Idade minima deve ser 18 ");
+                        MessageBox.Show("A Idade minima deve ser 18!");
                     }
                     else
                     {
@@ -153,7 +153,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Reveja os seus Dados");
+                    MessageBox.Show("Reveja os seus Dados!");
                 }
                 finally
                 {

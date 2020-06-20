@@ -17,10 +17,17 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         private bool dragging = false;
         private Point startPoint = new Point(0, 0);
         MySqlConnection cnn = new MySqlConnection(@"server=127.0.0.1;uid=root;database=psi18h_m16_2218089_diogobarradas");
+        MySqlCommand alo;
+        MySqlDataAdapter baz;
 
         public FormAdmin()
         {
             InitializeComponent();
+
+            button5.Visible = true;
+            button6.Visible = false;
+            button7.Visible = false;
+            button8.Visible = false;
 
             cnn.Open();
             string tabela = $"SELECT * FROM registo;";
@@ -34,6 +41,11 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void button3_Click(object sender, EventArgs e)
         {
+            button5.Visible = true;
+            button6.Visible = false;
+            button7.Visible = false;
+            button8.Visible = false;
+
             //atualizar o dataGrid
             cnn.Open();
             string bduser = $"SELECT * FROM registo;";
@@ -47,6 +59,11 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void button4_Click(object sender, EventArgs e)
         {
+            button5.Visible = false;
+            button6.Visible = true;
+            button7.Visible = false;
+            button8.Visible = false;
+
             //atualizar o dataGrid
             cnn.Open();
             string bddeposito = $"SELECT * FROM depositos;";
@@ -60,6 +77,11 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            button5.Visible = false;
+            button6.Visible = false;
+            button7.Visible = true;
+            button8.Visible = false;
+
             //atualizar o dataGrid
             cnn.Open();
             string bdlevantar = $"SELECT * FROM levantamentos;";
@@ -73,6 +95,11 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button5.Visible = false;
+            button6.Visible = false;
+            button7.Visible = false;
+            button8.Visible = true;
+
             //atualizar o dataGrid
             cnn.Open();
             string bdtrans = $"SELECT * FROM transferencias;";
@@ -168,6 +195,193 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
             pictureBox2.Image = Properties.Resources.FecharFinal1;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //apagar row da tabela
+                string selected = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                int id = Convert.ToInt32(selected);
+                if(id == 1)
+                {
+                    MessageBox.Show("O admin nao pode ser apagado!");
+                }
+                else
+                {
+                    string sql = "DELETE FROM registo WHERE ID =" + id + "";
+                    alo = new MySqlCommand(sql, cnn);
+                    cnn.Open();
+                    try
+                    {
+                        baz = new MySqlDataAdapter(alo);
+                        baz.DeleteCommand = cnn.CreateCommand();
+                        baz.DeleteCommand.CommandText = sql;
+                        if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            if (alo.ExecuteNonQuery() > 0)
+                            {
+                                string bduser = $"SELECT * FROM registo;";
+                                MySqlCommand cmd = new MySqlCommand(bduser, cnn);
+                                MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
+                                DataTable table = new DataTable();
+                                nova.Fill(table);
+                                dataGridView1.DataSource = table;
+                                MessageBox.Show("Utilizador apagado!");
+                            }
+                        }
+                    }
+                    catch (MySqlException)
+                    {
+                        MessageBox.Show("Para apagar este Utilizador você precisa :\n - Eliminar os seus Depósitos.\n - Eliminar os seus Levantamentos.\n - Eliminar as suas Transferências.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Notificação ");
+                    }
+                    finally
+                    {
+                        cnn.Close();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Selecione uma row!");
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //apagar row da tabela
+                string selected = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                int id = Convert.ToInt32(selected);
+                string sql = "DELETE FROM depositos WHERE idDepositos =" + id + "";
+                alo = new MySqlCommand(sql, cnn);
+                cnn.Open();
+                try
+                {
+                    baz = new MySqlDataAdapter(alo);
+                    baz.DeleteCommand = cnn.CreateCommand();
+                    baz.DeleteCommand.CommandText = sql;
+                    if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        if (alo.ExecuteNonQuery() > 0)
+                        {
+                            string bddeposito = $"SELECT * FROM depositos;";
+                            MySqlCommand cmd = new MySqlCommand(bddeposito, cnn);
+                            MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
+                            DataTable table = new DataTable();
+                            nova.Fill(table);
+                            dataGridView1.DataSource = table;
+                            MessageBox.Show("Depósito apagado!");
+                        }
+                    }
+                }              
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Notificação ");
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Selecione uma row!");
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //apagar row da tabela
+                string selected = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                int id = Convert.ToInt32(selected);
+                string sql = "DELETE FROM levantamentos WHERE idLevantamentos =" + id + "";
+                alo = new MySqlCommand(sql, cnn);
+                cnn.Open();
+                try
+                {
+                    baz = new MySqlDataAdapter(alo);
+                    baz.DeleteCommand = cnn.CreateCommand();
+                    baz.DeleteCommand.CommandText = sql;
+                    if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        if (alo.ExecuteNonQuery() > 0)
+                        {
+                            string bdlevantar = $"SELECT * FROM levantamentos;";
+                            MySqlCommand cmd = new MySqlCommand(bdlevantar, cnn);
+                            MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
+                            DataTable table = new DataTable();
+                            nova.Fill(table);
+                            dataGridView1.DataSource = table;
+                            MessageBox.Show("Levantamento apagado!");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Notificação ");
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Selecione uma row!");
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //apagar row da tabela
+                string selected = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                int id = Convert.ToInt32(selected);
+                string sql = "DELETE FROM transferencias WHERE idTransferencias =" + id + "";
+                alo = new MySqlCommand(sql, cnn);
+                cnn.Open();
+                try
+                {
+                    baz = new MySqlDataAdapter(alo);
+                    baz.DeleteCommand = cnn.CreateCommand();
+                    baz.DeleteCommand.CommandText = sql;
+                    if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        if (alo.ExecuteNonQuery() > 0)
+                        {
+                            string bdtrans = $"SELECT * FROM transferencias;";
+                            MySqlCommand cmd = new MySqlCommand(bdtrans, cnn);
+                            MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
+                            DataTable table = new DataTable();
+                            nova.Fill(table);
+                            dataGridView1.DataSource = table;
+                            MessageBox.Show("Transferência apagada!");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Notificação ");
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Selecione uma row!");
+            }
         }
     }
 }

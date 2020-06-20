@@ -88,7 +88,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                         var user = reader.GetString(0);
                         Class1.iduser = int.Parse(textBox1.Text);
 
-                        if (MessageBox.Show($"Bem-Vindo {user} !, Deseja consultar a visão de Moderador?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show($"Bem-Vindo {user}! Deseja consultar a visão de Moderador?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             this.Hide();
                             FormAdmin admin = new FormAdmin();
@@ -104,7 +104,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                     else
                     {
                         var user = reader.GetString(0);
-                        MessageBox.Show($"Bem-Vindo {user} !");
+                        MessageBox.Show($"Bem-Vindo {user}!");
                         Class1.iduser = int.Parse(textBox1.Text);
                         this.Hide();
                         Menu menu = new Menu();
