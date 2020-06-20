@@ -116,20 +116,20 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             if (textBox1.Text == "Morada" || textBox2.Text == "OPIN" || textBox3.Text == "Email" || textBox4.Text == "Idade" || textBox5.Text == "Username" || textBox2.Text.Length != 4) 
             {
-                MessageBox.Show("Todos os campos são obrigatórios!\nPIN = 4 Digitos");
+                MessageBox.Show("Todos os campos são obrigatórios!\nPIN = 4 Digitos/Letras");
             }
             else if (textBox3.Text.Contains("@") && textBox3.Text.Contains("."))
             {
+                connection.Open();
                 try
                 {
                     int Idadeuser = int.Parse(textBox4.Text);
                     if (Idadeuser < 18)
                     {
-                        MessageBox.Show("A Idade minima deve ser 18!");
+                        MessageBox.Show("A Idade minima é 18!");
                     }
                     else
                     {
-                        connection.Open();
                         MySqlCommand command = new MySqlCommand("INSERT INTO registo(PIN, Idade, Email, Morada, Username, Saldo) VALUES(@PIN, @Idade, @Email, @Morada, @Username, 0)", connection);
 
                         command.Parameters.AddWithValue("@Username", textBox5.Text);
@@ -140,11 +140,24 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
                         command.ExecuteNonQuery();
 
-                        MessageBox.Show($"O seu id é 0000"); //Apareca o ID do utilizador que acabou de criar
+                        string __email = textBox3.Text;
+                        string __username = textBox5.Text;
+                        MySqlCommand coma = new MySqlCommand("SELECT ID, Email, Username FROM registo WHERE Email=@Email and Username=@Username", connection);
+                        coma.Parameters.AddWithValue("@Email", __email);
+                        coma.Parameters.AddWithValue("@Username", __username);
+                        coma.ExecuteNonQuery();
 
-                        this.Hide();
-                        Login login = new Login();
-                        login.ShowDialog();
+                        MySqlDataReader teste = coma.ExecuteReader();
+                        if (teste.Read())
+                        {
+                            int __id = teste.GetInt32(0);
+
+                            MessageBox.Show($"O seu id é {__id}"); //Apareca o ID do utilizador que acabou de criar
+
+                            this.Hide();
+                            Login login = new Login();
+                            login.ShowDialog();
+                        }
                     }              
                 }
                 catch (MySqlException ex)

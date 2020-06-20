@@ -76,8 +76,8 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
                 connection.Close();
 
+                Thread.Sleep(700);
                 MessageBox.Show("A sua conta foi Eliminada!");
-                Thread.Sleep(1500);
 
                 //voltar ao login
                 this.Hide();

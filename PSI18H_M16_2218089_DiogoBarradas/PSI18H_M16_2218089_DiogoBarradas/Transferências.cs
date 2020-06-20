@@ -18,6 +18,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         public Transferências()
         {
             InitializeComponent();
+            panelbd.Visible = false;
             panel8.Visible = false;
             tempo.Visible = false;
 
@@ -218,6 +219,25 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             {
                 textBox2.Text = " ID Destinatário";
             }
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            panelbd.Visible = true;
+
+            cnn.Open();
+            string bdconsult = $"SELECT ID, Username FROM registo WHERE (ID != {Class1.iduser})";
+            MySqlCommand cons = new MySqlCommand(bdconsult, cnn);
+            MySqlDataAdapter consse = new MySqlDataAdapter(cons);
+            DataTable tabela = new DataTable();
+            consse.Fill(tabela);
+            dataGridView2.DataSource = tabela;
+            cnn.Close();
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            panelbd.Visible = false;
         }
     }
 }

@@ -94,6 +94,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox2.Image = global::PSI18H_M16_2218089_DiogoBarradas.Properties.Resources.icons8_question_mark_25;
             this.pictureBox2.Location = new System.Drawing.Point(135, 462);
             this.pictureBox2.Name = "pictureBox2";

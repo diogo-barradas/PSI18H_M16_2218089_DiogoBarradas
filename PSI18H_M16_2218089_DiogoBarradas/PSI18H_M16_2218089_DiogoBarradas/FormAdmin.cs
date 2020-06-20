@@ -218,7 +218,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                         baz = new MySqlDataAdapter(alo);
                         baz.DeleteCommand = cnn.CreateCommand();
                         baz.DeleteCommand.CommandText = sql;
-                        if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                         {
                             if (alo.ExecuteNonQuery() > 0)
                             {
@@ -267,7 +267,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                     baz = new MySqlDataAdapter(alo);
                     baz.DeleteCommand = cnn.CreateCommand();
                     baz.DeleteCommand.CommandText = sql;
-                    if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         if (alo.ExecuteNonQuery() > 0)
                         {
@@ -311,7 +311,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                     baz = new MySqlDataAdapter(alo);
                     baz.DeleteCommand = cnn.CreateCommand();
                     baz.DeleteCommand.CommandText = sql;
-                    if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         if (alo.ExecuteNonQuery() > 0)
                         {
@@ -355,7 +355,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                     baz = new MySqlDataAdapter(alo);
                     baz.DeleteCommand = cnn.CreateCommand();
                     baz.DeleteCommand.CommandText = sql;
-                    if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         if (alo.ExecuteNonQuery() > 0)
                         {
