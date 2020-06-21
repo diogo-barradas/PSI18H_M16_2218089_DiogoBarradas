@@ -30,21 +30,21 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             panel1.Visible = false;
             Class1.moedatipo = "€";
-            MessageBox.Show($"O Dinheiro foi atualizado para Euros ({Class1.moedatipo})\nAtualize a página!");
+            MessageBox.Show($"- O Dinheiro foi atualizado para Euros ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
             Class1.moedatipo = "$";
-            MessageBox.Show($"O Dinheiro foi atualizado para Dólares ({Class1.moedatipo})\nAtualize a página!");
+            MessageBox.Show($"- O Dinheiro foi atualizado para Dólares ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
         }
 
         private void button11_MouseClick(object sender, MouseEventArgs e)
         {
             panel1.Visible = false;
             Class1.moedatipo = "£";
-            MessageBox.Show($"O Dinheiro foi atualizado para Libras ({Class1.moedatipo})\nAtualize a página!");
+            MessageBox.Show($"- O Dinheiro foi atualizado para Libras ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
         }
 
         //Minimizar App
@@ -202,7 +202,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(pictureBox2, $"Selecione uma opção do menu!\nO seu ID é ... {Class1.iduser}");
+            toolTip.SetToolTip(pictureBox2, $"Bank$Acc é uma empresa de pagamentos online.\n\nVocê é o nosso utilizador número {Class1.iduser}.");
         }
     }
 }

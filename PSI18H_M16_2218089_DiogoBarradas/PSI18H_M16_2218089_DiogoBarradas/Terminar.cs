@@ -18,6 +18,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         public Terminar()
         {
             InitializeComponent();
+            panel2.Visible = false;
         }
 
         MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=psi18h_m16_2218089_diogobarradas");
@@ -48,12 +49,10 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void Adicionar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem a certeza que deseja adicionar uma nova conta?", "Adicionar Conta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                this.Hide();
-                Registar registo = new Registar();
-                registo.ShowDialog();
-            }
+            panel2.Visible = true;
+            Sessao.Visible = false;
+            Sair.Visible = false;
+            Eliminar.Visible = false;
         }
 
         private void Eliminar_Click(object sender, EventArgs e)
@@ -84,6 +83,128 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                 Login login = new Login();
                 login.ShowDialog();
             }         
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.Image = Properties.Resources.closefinal5;
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.Image = Properties.Resources.FecharFinal1;
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "OPIN")
+            {
+                textBox2.Text = "";
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = "OPIN";
+            }
+        }
+
+        private void textBox4_Enter(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "Idade")
+            {
+                textBox4.Text = "";
+            }
+        }
+
+        private void textBox4_Leave(object sender, EventArgs e)
+        {
+            if (textBox4.Text == "")
+            {
+                textBox4.Text = "Idade";
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Morada")
+            {
+                textBox1.Text = "";
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "Morada";
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                textBox2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Morada" || textBox2.Text == "OPIN" || textBox4.Text == "Idade" || textBox2.Text.Length != 4)
+            {
+                MessageBox.Show("Todos os campos são obrigatórios!\nPIN = 4 Digitos/Letras");
+            }
+            else
+            {
+                connection.Open();
+                try
+                {
+                    int Idadeuser = int.Parse(textBox4.Text);
+                    if (Idadeuser < 18)
+                    {
+                        MessageBox.Show("A Idade minima é 18!");
+                    }
+                    else
+                    {
+                        MySqlCommand coand = new MySqlCommand($"UPDATE registo SET Morada=@Morada, PIN=@PIN, Idade=@Idade WHERE (ID = {Class1.iduser})",connection);
+                        coand.Parameters.AddWithValue("@Morada", textBox1.Text);
+                        coand.Parameters.AddWithValue("@PIN", textBox2.Text);
+                        coand.Parameters.AddWithValue("@Idade", textBox4.Text);
+                        coand.ExecuteNonQuery();
+                        MessageBox.Show("Os seus dados foram atualizados!");
+
+                        panel2.Visible = false;
+                        Sessao.Visible = true;
+                        Sair.Visible = true;
+                        Eliminar.Visible = true;
+                        Adicionar.Visible = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Reveja os seus Dados!");
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }         
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+            Sessao.Visible = true;
+            Sair.Visible = true;
+            Eliminar.Visible = true;
+            Adicionar.Visible = true;
         }
     }
 }

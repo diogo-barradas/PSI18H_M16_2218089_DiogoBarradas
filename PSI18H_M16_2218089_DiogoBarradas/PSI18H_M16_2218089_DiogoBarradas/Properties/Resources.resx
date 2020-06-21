@@ -178,6 +178,12 @@
   <data name="icons8-exit-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-exit-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Medicos Mundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Medicos Mundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="closefinal5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closefinal5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ex1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ex1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -292,9 +298,6 @@
   <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-deposit-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-deposit-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-safe-in-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-safe-in-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -310,8 +313,8 @@
   <data name="icons8-question-mark-25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-question-mark-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Medicos Mundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Medicos Mundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-deposit-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-deposit-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-withdrawal-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-withdrawal-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,7 +322,7 @@
   <data name="Teste21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Teste21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="closefinal5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\closefinal5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nova" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nova.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

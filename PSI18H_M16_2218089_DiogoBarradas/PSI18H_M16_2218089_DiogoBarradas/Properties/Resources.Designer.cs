@@ -593,6 +593,16 @@ namespace PSI18H_M16_2218089_DiogoBarradas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nova {
+            get {
+                object obj = ResourceManager.GetObject("nova", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap olho {
             get {
                 object obj = ResourceManager.GetObject("olho", resourceCulture);
