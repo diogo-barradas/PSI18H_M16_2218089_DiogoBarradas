@@ -38,7 +38,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         public string VValor
         {
             get { return _Valor; }
-            set { _Valor = value; Valor.Text = value; }
+            set { _Valor = value; Valor.Text = value+Class1.moedatipo; }
         }
     }
 }

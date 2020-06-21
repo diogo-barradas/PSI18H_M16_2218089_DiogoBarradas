@@ -21,6 +21,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             panelbd.Visible = false;
             panel8.Visible = false;
             tempo.Visible = false;
+            label3.Text = Class1.moedatipo;
 
             cnn.Open();
             string bdtranferencias = $"SELECT Descriçao, Hora, Valor, idDestinatario FROM transferencias WHERE (ID = {Class1.iduser})";
@@ -121,7 +122,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                                         adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = {saldofinaldestino} WHERE (ID = {_iddestino})");
                                         adapter.UpdateCommand.ExecuteNonQuery();
 
-                                        MessageBox.Show($"{transferirvalor}€ foram Transferidos!");
+                                        MessageBox.Show($"{transferirvalor}{Class1.moedatipo} foram Transferidos!");
                                         tempo.Text = DateTime.Now.ToShortTimeString();//recebe a hora atual
 
                                         MySqlCommand comando = new MySqlCommand($"INSERT INTO transferencias(Descriçao, Valor, Hora, ID, idDestinatario) VALUES (@Descriçao, @Valor, @Hora, {Class1.iduser}, {_iddestino})", cnn);

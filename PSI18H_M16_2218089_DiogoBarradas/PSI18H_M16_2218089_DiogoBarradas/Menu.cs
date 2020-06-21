@@ -23,21 +23,28 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             panel1.Visible = false;
             Slidepanel.Height = button1.Height;
             Slidepanel.Top = button1.Top;
+            Class1.moedatipo = "€";//euro é a moeda caso o user nao mude 
         }
 
         private void button9_MouseClick(object sender, MouseEventArgs e)
         {
             panel1.Visible = false;
+            Class1.moedatipo = "€";
+            MessageBox.Show($"O Dinheiro foi atualizado para Euros ({Class1.moedatipo})\nAtualize a página!");
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
+            Class1.moedatipo = "$";
+            MessageBox.Show($"O Dinheiro foi atualizado para Dólares ({Class1.moedatipo})\nAtualize a página!");
         }
 
         private void button11_MouseClick(object sender, MouseEventArgs e)
         {
             panel1.Visible = false;
+            Class1.moedatipo = "£";
+            MessageBox.Show($"O Dinheiro foi atualizado para Libras ({Class1.moedatipo})\nAtualize a página!");
         }
 
         //Minimizar App
@@ -87,6 +94,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         //Abrir e fechar Painel 1
         private void button1_Click(object sender, EventArgs e)
         {
+            panel1.BringToFront();
             if (panel1.Visible == false)
             {
                 panel1.Visible = true;
@@ -196,6 +204,5 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             toolTip.SetToolTip(pictureBox2, $"Selecione uma opção do menu!\nO seu ID é ... {Class1.iduser}");
         }
-
     }
 }

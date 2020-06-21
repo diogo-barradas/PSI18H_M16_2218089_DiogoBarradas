@@ -259,7 +259,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(200, 35);
             this.button11.TabIndex = 2;
-            this.button11.Text = "Libra";
+            this.button11.Text = "Libras";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button11_MouseClick);
             // 
@@ -275,7 +275,7 @@
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(200, 35);
             this.button10.TabIndex = 1;
-            this.button10.Text = "Dollar";
+            this.button10.Text = "Dólares";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -292,7 +292,7 @@
             this.button9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button9.Size = new System.Drawing.Size(200, 35);
             this.button9.TabIndex = 0;
-            this.button9.Text = "Euro";
+            this.button9.Text = "Euros";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button9_MouseClick);
             // 

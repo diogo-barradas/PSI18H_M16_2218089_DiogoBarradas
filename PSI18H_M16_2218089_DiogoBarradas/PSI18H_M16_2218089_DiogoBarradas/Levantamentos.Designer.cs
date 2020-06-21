@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Levantamentos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tempo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.Saldo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tempo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -77,6 +77,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 488);
             this.panel1.TabIndex = 0;
+            // 
+            // tempo
+            // 
+            this.tempo.AutoSize = true;
+            this.tempo.Location = new System.Drawing.Point(302, 24);
+            this.tempo.Name = "tempo";
+            this.tempo.Size = new System.Drawing.Size(0, 13);
+            this.tempo.TabIndex = 21;
             // 
             // label4
             // 
@@ -244,9 +252,8 @@
             this.label3.Font = new System.Drawing.Font("Tw Cen MT", 15F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(109, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 23);
+            this.label3.Size = new System.Drawing.Size(0, 23);
             this.label3.TabIndex = 14;
-            this.label3.Text = "€";
             // 
             // pictureBox9
             // 
@@ -284,14 +291,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // tempo
-            // 
-            this.tempo.AutoSize = true;
-            this.tempo.Location = new System.Drawing.Point(302, 24);
-            this.tempo.Name = "tempo";
-            this.tempo.Size = new System.Drawing.Size(0, 13);
-            this.tempo.TabIndex = 21;
             // 
             // Levantamentos
             // 

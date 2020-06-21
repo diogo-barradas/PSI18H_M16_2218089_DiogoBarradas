@@ -15,5 +15,12 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             set { _iduser = value; }
         }
         //guardar o id ao logar
+
+        private static string _moedatipo;
+        public static string moedatipo
+        {
+            get { return _moedatipo; }
+            set { _moedatipo = value; }
+        }
     }
 }

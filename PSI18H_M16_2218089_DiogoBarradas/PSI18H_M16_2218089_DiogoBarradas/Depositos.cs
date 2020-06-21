@@ -20,6 +20,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             InitializeComponent();
             panel8.Visible = false;
             tempo.Visible = false;
+            label3.Text = Class1.moedatipo;
 
             cnn.Open();
             string bddepositos = $"SELECT Descriçao, Hora, Valor FROM depositos WHERE (ID = {Class1.iduser})";
@@ -97,7 +98,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                             MessageBox.Show(ex.Message, "Notificação");
                         }
                         
-                        MessageBox.Show($"{addvalor}€ foram Depositados!");
+                        MessageBox.Show($"{addvalor}{Class1.moedatipo} foram Depositados!");
                         tempo.Text = DateTime.Now.ToShortTimeString();//recebe a hora atual
                         
                         cnn.Open();

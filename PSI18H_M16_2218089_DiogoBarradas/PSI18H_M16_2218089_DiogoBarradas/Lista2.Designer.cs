@@ -47,9 +47,8 @@
             this.Valor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Valor.Location = new System.Drawing.Point(526, 39);
             this.Valor.Name = "Valor";
-            this.Valor.Size = new System.Drawing.Size(44, 16);
+            this.Valor.Size = new System.Drawing.Size(0, 16);
             this.Valor.TabIndex = 6;
-            this.Valor.Text = "7000";
             // 
             // Hora
             // 
