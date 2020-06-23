@@ -200,5 +200,13 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             pictureBox2.Image = Properties.Resources.FecharFinal1;
         }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

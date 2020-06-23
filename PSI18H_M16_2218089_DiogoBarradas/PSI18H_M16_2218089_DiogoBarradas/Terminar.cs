@@ -49,10 +49,20 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void Adicionar_Click(object sender, EventArgs e)
         {
-            panel2.Visible = true;
-            Sessao.Visible = false;
-            Sair.Visible = false;
-            Eliminar.Visible = false;
+            if (panel2.Visible == true)
+            {
+                panel2.Visible = false;
+                Sessao.Visible = true;
+                Sair.Visible = true;
+                Eliminar.Visible = true;
+            }
+            else
+            {
+                panel2.Visible = true;
+                Sessao.Visible = false;
+                Sair.Visible = false;
+                Eliminar.Visible = false;
+            }
         }
 
         private void Eliminar_Click(object sender, EventArgs e)
@@ -205,6 +215,14 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             Sair.Visible = true;
             Eliminar.Visible = true;
             Adicionar.Visible = true;
+        }
+
+        private void textBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

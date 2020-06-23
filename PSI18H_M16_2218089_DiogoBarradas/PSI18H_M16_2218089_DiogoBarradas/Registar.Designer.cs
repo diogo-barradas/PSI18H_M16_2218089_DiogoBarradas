@@ -141,6 +141,7 @@
             this.textBox4.TabStop = false;
             this.textBox4.Text = "Idade";
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
+            this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
             // 
             // textBox3

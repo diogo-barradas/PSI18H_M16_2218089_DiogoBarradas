@@ -17,6 +17,8 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         private bool dragging = false;
         private Point startPoint = new Point(0, 0);
 
+        MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=psi18h_m16_2218089_diogobarradas");
+        private string _username;
         public Menu()
         {
             InitializeComponent();
@@ -24,6 +26,13 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             Slidepanel.Height = button1.Height;
             Slidepanel.Top = button1.Top;
             Class1.moedatipo = "€";//euro é a moeda caso o user nao mude 
+
+            connection.Open();
+            MySqlCommand command = new MySqlCommand($"SELECT Username FROM registo WHERE(ID = {Class1.iduser})", connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            _username = reader.GetString(0);
+            connection.Close();
         }
 
         private void button9_MouseClick(object sender, MouseEventArgs e)
@@ -202,7 +211,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(pictureBox2, $"Bank$Acc é uma empresa de pagamentos online.\n\nVocê é o nosso utilizador número {Class1.iduser}.");
+            toolTip.SetToolTip(pictureBox2, $"Bank$Acc é uma empresa de pagamentos online.\n\n{_username} você é o nosso utilizador número {Class1.iduser}.");
         }
     }
 }

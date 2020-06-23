@@ -240,5 +240,13 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         {
             panelbd.Visible = false;
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

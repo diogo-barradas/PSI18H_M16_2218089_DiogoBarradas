@@ -166,5 +166,13 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                 textBox3.Text = " ex.Levantamentos";
             }
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

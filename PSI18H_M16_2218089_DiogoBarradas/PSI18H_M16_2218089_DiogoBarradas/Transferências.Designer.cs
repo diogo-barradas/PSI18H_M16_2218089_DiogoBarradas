@@ -350,6 +350,7 @@
             this.textBox1.TabIndex = 9;
             this.textBox1.Text = " Montante";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // panel2

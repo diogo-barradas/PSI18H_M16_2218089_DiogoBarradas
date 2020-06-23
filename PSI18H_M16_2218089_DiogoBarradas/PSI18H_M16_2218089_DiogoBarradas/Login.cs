@@ -118,9 +118,9 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                 connection.Close();
             }
 
-            catch (MySqlException ex)
+            catch (MySqlException)
             {
-                MessageBox.Show(ex.Message, "Sem Conexão");
+                MessageBox.Show("Você necessita abrir o XAMPP!", "Sem conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ox)
             {
