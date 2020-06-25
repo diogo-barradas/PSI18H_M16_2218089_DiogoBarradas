@@ -22,6 +22,5 @@ namespace PSI18H_M16_2218089_DiogoBarradas
             get { return _moedatipo; }
             set { _moedatipo = value; }
         }
-
     }
 }
