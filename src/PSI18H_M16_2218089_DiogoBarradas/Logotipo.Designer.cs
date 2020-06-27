@@ -44,11 +44,11 @@
             this.TituloCapa.AutoSize = true;
             this.TituloCapa.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.TituloCapa.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.TituloCapa.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TituloCapa.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TituloCapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(164)))), ((int)(((byte)(93)))));
-            this.TituloCapa.Location = new System.Drawing.Point(331, 289);
+            this.TituloCapa.Location = new System.Drawing.Point(338, 272);
             this.TituloCapa.Name = "TituloCapa";
-            this.TituloCapa.Size = new System.Drawing.Size(160, 30);
+            this.TituloCapa.Size = new System.Drawing.Size(154, 47);
             this.TituloCapa.TabIndex = 1;
             this.TituloCapa.Text = "Bank$Acc";
             // 
@@ -56,11 +56,11 @@
             // 
             this.Data.AutoSize = true;
             this.Data.BackColor = System.Drawing.Color.Transparent;
-            this.Data.Font = new System.Drawing.Font("Showcard Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Data.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Data.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(164)))), ((int)(((byte)(93)))));
-            this.Data.Location = new System.Drawing.Point(614, 419);
+            this.Data.Location = new System.Drawing.Point(604, 419);
             this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(40, 17);
+            this.Data.Size = new System.Drawing.Size(39, 19);
             this.Data.TabIndex = 7;
             this.Data.Text = "Time";
             // 
@@ -98,9 +98,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TituloCapa);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.Data);
-            this.Controls.Add(this.TituloCapa);
             this.Controls.Add(this.BankCapa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
