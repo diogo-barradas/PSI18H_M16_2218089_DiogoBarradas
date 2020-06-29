@@ -38,22 +38,43 @@ namespace PSI18H_M16_2218089_DiogoBarradas
         private void button9_MouseClick(object sender, MouseEventArgs e)
         {
             panel1.Visible = false;
-            Class1.moedatipo = "€";
-            MessageBox.Show($"- O Dinheiro foi atualizado para Euros ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
+            if(Class1.moedatipo == "€")
+            {
+                MessageBox.Show("O Dinheiro já se encontra em Euros!");
+            }
+            else
+            {
+                Class1.moedatipo = "€";
+                MessageBox.Show($"- O Dinheiro foi atualizado para Euros ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            Class1.moedatipo = "$";
-            MessageBox.Show($"- O Dinheiro foi atualizado para Dólares ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
+            if(Class1.moedatipo == "$")
+            {
+                MessageBox.Show("O Dinheiro já se encontra em Dólares!");
+            }
+            else
+            {
+                Class1.moedatipo = "$";
+                MessageBox.Show($"- O Dinheiro foi atualizado para Dólares ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
+            }
         }
 
         private void button11_MouseClick(object sender, MouseEventArgs e)
         {
             panel1.Visible = false;
-            Class1.moedatipo = "£";
-            MessageBox.Show($"- O Dinheiro foi atualizado para Libras ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
+            if (Class1.moedatipo == "£")
+            {
+                MessageBox.Show("O Dinheiro já se encontra em Libras!");
+            }
+            else
+            {
+                Class1.moedatipo = "£";
+                MessageBox.Show($"- O Dinheiro foi atualizado para Libras ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
+            }
         }
 
         //Minimizar App

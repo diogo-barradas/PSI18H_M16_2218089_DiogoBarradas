@@ -95,7 +95,8 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                             { 
                                 cnn.Open();
                                 adapter.UpdateCommand = cnn.CreateCommand();
-                                adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = {saldofinal} WHERE (ID = {Class1.iduser})");
+                                adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
+                                adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldofinal);
                                 adapter.UpdateCommand.ExecuteNonQuery();
                                 cnn.Close();
                             }
@@ -110,7 +111,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                             cnn.Open();
                             MySqlCommand comando = new MySqlCommand($"INSERT INTO levantamentos(Descriçao, Valor, ID, Hora) VALUES (@Descriçao, @Valor, {Class1.iduser}, @Hora)", cnn);
                             comando.Parameters.AddWithValue("@Descriçao", textBox3.Text);
-                            comando.Parameters.AddWithValue("@Valor", textBox1.Text);
+                            comando.Parameters.AddWithValue("@Valor", retirarvalor);
                             comando.Parameters.AddWithValue("@Hora", tempo.Text);
 
                             comando.ExecuteNonQuery();

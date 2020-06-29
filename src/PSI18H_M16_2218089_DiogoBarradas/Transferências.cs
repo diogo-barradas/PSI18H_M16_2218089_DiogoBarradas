@@ -114,12 +114,14 @@ namespace PSI18H_M16_2218089_DiogoBarradas
                                         MySqlDataAdapter adapter = new MySqlDataAdapter();
                                         
                                         adapter.UpdateCommand = cnn.CreateCommand();
-                                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = {saldofinal} WHERE (ID = {Class1.iduser})");
+                                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
+                                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldofinal);
                                         adapter.UpdateCommand.ExecuteNonQuery();
 
                                         //acrescentar valor ao idDestinatario
                                         adapter.UpdateCommand = cnn.CreateCommand();
-                                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = {saldofinaldestino} WHERE (ID = {_iddestino})");
+                                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldonovo WHERE (ID = {_iddestino})");
+                                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldonovo", saldofinaldestino);
                                         adapter.UpdateCommand.ExecuteNonQuery();
 
                                         MessageBox.Show($"{transferirvalor}{Class1.moedatipo} foram Transferidos!");
@@ -127,7 +129,7 @@ namespace PSI18H_M16_2218089_DiogoBarradas
 
                                         MySqlCommand comando = new MySqlCommand($"INSERT INTO transferencias(Descriçao, Valor, Hora, ID, idDestinatario) VALUES (@Descriçao, @Valor, @Hora, {Class1.iduser}, {_iddestino})", cnn);
                                         comando.Parameters.AddWithValue("@Descriçao", textBox3.Text);
-                                        comando.Parameters.AddWithValue("@Valor", textBox1.Text);
+                                        comando.Parameters.AddWithValue("@Valor", transferirvalor);
                                         comando.Parameters.AddWithValue("@Hora", tempo.Text);
                                         comando.Parameters.AddWithValue("@idDestinatario", textBox2.Text);
 
